@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-content">
+                <h1 class="app-title">
+                    <i class="fas fa-tasks"></i> My To-Do List
+                </h1>
+                <p class="app-subtitle">Stay organized and productive</p>
+            </div>
+        </header>
+
+        <!-- Main Container -->
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <!-- Input Section -->
+                    <div class="input-section card shadow-sm">
+                        <div class="card-body">
+                            <form id="todoForm" class="input-form">
+                                <div class="input-group">
+                                    <input 
+                                        type="text" 
+                                        id="todoInput" 
+                                        class="form-control" 
+                                        placeholder="Add a new task..."
+                                        autocomplete="off"
+                                    >
+                                    <select id="prioritySelect" class="form-select priority-select">
+                                        <option value="low">Low</option>
+                                        <option value="medium" selected>Medium</option>
+                                        <option value="high">High</option>
+                                    </select>
+                                    <button type="submit" class="btn btn-primary add-btn">
+                                        <i class="fas fa-plus"></i> Add
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Filter & Sort Section -->
+                    <div class="filter-section">
+                        <div class="filter-group">
+                            <button class="filter-btn active" data-filter="all">
+                                <i class="fas fa-list"></i> All
+                            </button>
+                            <button class="filter-btn" data-filter="active">
+                                <i class="fas fa-circle"></i> Active
+                            </button>
+                            <button class="filter-btn" data-filter="completed">
+                                <i class="fas fa-check-circle"></i> Completed
+                            </button>
+                            <button class="filter-btn" data-filter="high">
+                                <i class="fas fa-exclamation-circle"></i> High Priority
+                            </button>
+                        </div>
+                        <div class="sort-group">
+                            <select id="sortSelect" class="form-select sort-select">
+                                <option value="date-desc">Newest First</option>
+                                <option value="date-asc">Oldest First</option>
+                                <option value="priority">Priority</option>
+                                <option value="name">Alphabetical</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Stats Section -->
+                    <div class="stats-section">
+                        <div class="stat-card">
+                            <div class="stat-value" id="totalTasks">0</div>
+                            <div class="stat-label">Total Tasks</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="activeTasks">0</div>
+                            <div class="stat-label">Active</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="completedTasks">0</div>
+                            <div class="stat-label">Completed</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="completionRate">0%</div>
+                            <div class="stat-label">Completion Rate</div>
+                        </div>
+                    </div>
+
+                    <!-- Tasks List -->
+                    <div class="tasks-section">
+                        <div id="emptyState" class="empty-state">
+                            <div class="empty-icon">
+                                <i class="fas fa-clipboard-list"></i>
+                            </div>
+                            <p>No tasks yet. Add one to get started!</p>
+                        </div>
+                        <ul id="todoList" class="todo-list"></ul>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="action-buttons">
+                        <button id="clearCompleted" class="btn btn-outline-warning">
+                            <i class="fas fa-trash"></i> Clear Completed
+                        </button>
+                        <button id="clearAll" class="btn btn-outline-danger">
+                            <i class="fas fa-ban"></i> Clear All
+                        </button>
+                        <button id="exportBtn" class="btn btn-outline-info">
+                            <i class="fas fa-download"></i> Export
+                        </button>
+                    </div>
+
+                    <!-- Progress Bar -->
+                    <div class="progress-section">
+                        <div class="progress-label">
+                            <span>Overall Progress</span>
+                            <span id="progressText">0%</span>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div id="progressBar" class="progress-bar" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
