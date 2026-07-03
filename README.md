@@ -35,11 +35,31 @@ A modern, responsive, mobile-friendly personal portfolio website built with HTML
 
 ```
 portfolio/
-├── index.html          # Main HTML file
-├── styles.css          # Custom CSS styles
-├── script.js           # JavaScript functionality
-└── README.md           # Documentation
+├── index.html              # Portfolio main page
+├── styles.css              # Portfolio styles
+├── script.js               # Portfolio functionality
+├── todo-index.html         # To-Do List app
+├── todo-styles.css         # To-Do List styles
+├── todo-script.js          # To-Do List functionality
+├── sw.js                   # Service Worker (offline support)
+├── README.md               # Portfolio documentation
+└── README-todo.md          # To-Do List documentation
 ```
+
+## 🌐 Live Demos
+
+### 1. **Personal Portfolio Website**
+- **URL**: https://sivasrib2006.github.io/portfolio/
+- **Features**: Showcase projects, skills, and contact info
+- **Files**: `index.html`, `styles.css`, `script.js`
+
+### 2. **To-Do List Application**
+- **URL**: https://sivasrib2006.github.io/portfolio/todo-index.html
+- **Features**: Task management with local storage
+- **Files**: `todo-index.html`, `todo-styles.css`, `todo-script.js`
+- **Documentation**: See `README-todo.md`
+
+---
 
 ## 🚀 Getting Started
 
@@ -50,25 +70,38 @@ cd portfolio
 ```
 
 ### 2. Open Locally
-Simply open `index.html` in your web browser.
+Simply open `index.html` in your web browser for the portfolio, or `todo-index.html` for the to-do app.
 
 ### 3. Deploy to GitHub Pages
 
 1. Push your code to GitHub (if not already done):
 ```bash
 git add .
-git commit -m "Initial portfolio commit"
+git commit -m "Initial portfolio and todo app commit"
 git push -u origin main
 ```
 
 2. Go to your repository settings on GitHub
 3. Scroll to "GitHub Pages" section
 4. Select `main` branch as source
-5. Your site will be live at: `https://sivasrib2006.github.io/portfolio/`
+5. Your sites will be live at:
+   - Portfolio: `https://sivasrib2006.github.io/portfolio/`
+   - To-Do App: `https://sivasrib2006.github.io/portfolio/todo-index.html`
 
-## 🎨 Customization
+---
 
-### Update Personal Information
+## 📋 Project 1: Personal Portfolio
+
+### Features
+- ✅ Hero section with animations
+- ✅ Skills showcase with progress bars
+- ✅ Projects portfolio with descriptions
+- ✅ Contact form with email integration
+- ✅ Social media links
+- ✅ Smooth scroll navigation
+- ✅ Fully responsive design
+
+### Customization
 
 **In `index.html`:**
 - Replace "Welcome to My Portfolio" with your name
@@ -85,25 +118,70 @@ git push -u origin main
 - Update email address in contact form
 - Modify form validation logic
 
-### Edit Sections
+---
 
-#### Skills Section
-Add more skill cards by duplicating the skill card structure in the HTML.
+## ✅ Project 2: To-Do List Application
 
-#### Projects Section
-Update project information:
-- Project title
-- Project description
-- Technology badges
-- Project links
+### Features
+- ✅ Add, edit, delete tasks
+- ✅ Task priorities (Low, Medium, High)
+- ✅ Filter by status and priority
+- ✅ Sort by date, priority, alphabetically
+- ✅ Real-time statistics
+- ✅ Progress tracking
+- ✅ Export as CSV
+- ✅ Local storage persistence
+- ✅ Fully responsive design
 
-#### Contact Section
-- Update email address
-- Add more social media links
-- Customize contact form
+### Quick Start
+1. Open `todo-index.html` in browser
+2. Type task and select priority
+3. Click "Add" or press Enter
+4. Manage tasks with edit/delete buttons
+5. Use filters to organize
+6. Export tasks as needed
+
+### Data Storage
+- All tasks saved automatically to browser
+- Data persists across sessions
+- Clear anytime with "Clear All"
+- Export as CSV for backup
+
+For detailed documentation, see: `README-todo.md`
+
+---
+
+## 🎨 Customization
+
+### Portfolio Website
+
+#### Update Personal Information
+- Name and tagline
+- Profile picture
+- Skills and proficiency levels
+- Projects with descriptions
+- Social media links
+- Color scheme
+
+#### Edit Sections
+- Skills Section: Add more skill cards
+- Projects Section: Update projects with your work
+- Contact Section: Update email and social links
+
+### To-Do List Application
+
+#### Customize Features
+- Priority levels
+- Filter options
+- Sort methods
+- Statistics display
+- Export format
+
+---
 
 ## 📋 Customization Checklist
 
+### Portfolio
 - [ ] Update your name and tagline
 - [ ] Add your profile picture (replace placeholder)
 - [ ] Update skills list
@@ -114,6 +192,15 @@ Update project information:
 - [ ] Test on mobile devices
 - [ ] Deploy to GitHub Pages
 
+### To-Do List
+- [ ] Test add/edit/delete functionality
+- [ ] Verify local storage works
+- [ ] Check responsive design
+- [ ] Test filters and sorting
+- [ ] Export and review CSV
+
+---
+
 ## ⚡ Performance Optimization
 
 - Minified CSS and JavaScript
@@ -121,8 +208,9 @@ Update project information:
 - Lazy loading support
 - Smooth animations with CSS transforms
 - Mobile-first responsive design
+- Service Worker for offline support (To-Do App)
 
-## 🎯 Features Breakdown
+## 🎯 Portfolio Features Breakdown
 
 ### Navigation
 - Sticky navbar that stays at top while scrolling
@@ -154,19 +242,51 @@ Update project information:
 - Social media links
 - Responsive form layout
 
+---
+
+## 🎯 To-Do App Features Breakdown
+
+### Task Management
+- Create tasks with text and priority
+- Edit existing tasks
+- Mark complete/incomplete
+- Delete individual tasks
+- Bulk operations (clear completed/all)
+
+### Filtering System
+- All tasks
+- Active tasks
+- Completed tasks
+- High-priority tasks
+
+### Sorting Options
+- Newest first
+- Oldest first
+- By priority
+- Alphabetical order
+
+### Statistics Dashboard
+- Total tasks count
+- Active tasks count
+- Completed tasks count
+- Completion rate percentage
+
+---
+
 ## 🔒 Security Considerations
 
 - Form submissions use mailto links (client-side only)
 - No backend server required for basic functionality
+- Local storage is browser-specific and private
 - For enhanced security, integrate with a backend service
 
 ## 🌐 Browser Support
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers
+- ✅ Chrome (latest)
+- ✅ Firefox (latest)
+- ✅ Safari (latest)
+- ✅ Edge (latest)
+- ✅ Mobile browsers
 
 ## 📱 Mobile Optimization
 
@@ -182,28 +302,39 @@ Update project information:
 - [MDN Web Docs](https://developer.mozilla.org/)
 - [CSS-Tricks](https://css-tricks.com/)
 - [Font Awesome Icons](https://fontawesome.com/icons)
+- [Local Storage API](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
 
 ## 🐛 Troubleshooting
 
-### Navbar not working
+### Portfolio Website
+
+**Navbar not working**
 - Ensure Bootstrap JS is loaded
 - Check for console errors
 
-### Smooth scroll not working
+**Smooth scroll not working**
 - Ensure JavaScript file is linked correctly
 - Check for JavaScript errors in browser console
 
-### Images not displaying
+**Images not displaying**
 - Update image URLs
 - Check file paths
 
-### Responsive design issues
-- Clear browser cache
-- Test in incognito mode
-- Check media queries in CSS
+### To-Do List Application
+
+**Tasks not saving**
+- Ensure local storage is enabled
+- Check browser settings
+- Try clearing cache and reload
+
+**Tasks not displaying**
+- Refresh the page
+- Check browser console for errors
+- Verify JavaScript is enabled
 
 ## 📈 Future Enhancements
 
+### Portfolio
 - [ ] Add blog section
 - [ ] Implement dark mode toggle
 - [ ] Add filtering for projects
@@ -213,17 +344,28 @@ Update project information:
 - [ ] Add animations library (AOS)
 - [ ] SEO optimization
 
+### To-Do List
+- [ ] Categories/Projects
+- [ ] Due dates and reminders
+- [ ] Recurring tasks
+- [ ] Subtasks
+- [ ] Tags and labels
+- [ ] Search functionality
+- [ ] Sync across devices
+- [ ] Dark mode toggle
+
 ## 📄 License
 
 This project is open source and available under the MIT License.
 
 ## 👤 Author
 
-**Your Name** - Portfolio Website
+**Your Name**
 
 - GitHub: [@sivasrib2006](https://github.com/sivasrib2006)
 - LinkedIn: [Your Profile](https://linkedin.com)
 - Email: your.email@example.com
+- Portfolio: https://sivasrib2006.github.io/portfolio/
 
 ## 🤝 Contributing
 
@@ -231,7 +373,14 @@ Contributions, issues, and feature requests are welcome! Feel free to fork and s
 
 ## ⭐ Support
 
-If you found this project helpful, please give it a star! ⭐
+If you found these projects helpful, please give them a star! ⭐
+
+---
+
+## 📚 Documentation
+
+- **Portfolio**: See main `README.md` (this file) for complete portfolio documentation
+- **To-Do App**: See `README-todo.md` for complete to-do app documentation
 
 ---
 
